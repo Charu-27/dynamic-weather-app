@@ -1,0 +1,52 @@
+#heading{
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3rem;
+}
+
+#state{
+    font-weight:bold ;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 5rem;
+    font-style: oblique;
+}
+#day{
+    
+    font-weight:bold ;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 0.5rem;
+
+}
+#date{
+    margin-top:0.3rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family:'Times New Roman', Times, serif;
+}
+#temp{
+    font-weight:bold ;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-style: oblique;
+ 
+
+}
+#time{
+    font-weight:bold ;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 1rem;
+
+}
+.background{
+    background-image: url("E:\nodeproject\image.jpeg");
+    background-position: absolute;
+    background-repeat: no-repeat;
+}

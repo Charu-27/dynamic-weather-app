@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <div className="background" >
+        <img src="E:\nodeproject\image.jpeg" alt=" ">
+    <h3 style="font-size:4rem;text-align:center;font-family:Courier New, monospace">WEATHER</h3>
+    <div id="location" style="text-align: center;font-size:2rem;font-family: Snell Roundhand, cursive;">{%location%},{%country%}</div>
+<div id="time" style="margin-top:1rem;text-align: center; font-family:cursive">12:55</div>
+<div id="day" style="text-align: center;font-family: cursive">monday</div>
+<div id="date" style="text-align: center;font-family: cursive ">30-12-2021</div>
+<div id="temp" style="margin-top: 2rem;font-size:3rem;font-family: monospace ; text-align: center;">{%temperory%}&deg;C</div>
+<div style="padding-left: 2rem;font-size: 2.5rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Weather details:</div>
+<div style="padding-left:2rem;margin-top:2rem;display:flex; flex-direction: row;font-size: 1rem;font-family: Palatino, URW Palladio L, serif;">
+Weather : {%weather%}<br></br>
+Temp_range : {%temp_min%}&deg;C/{%temp_max%}&deg;C<br></br>
+Air Pressure : {%airpressure%}hPa<br></br>
+Humidity : {%humidity%}%
+</div>
+</div>
+
+<script>
+ const currenttime=document.getElementById("time");   
+const currentday=document.getElementById("day");
+const currentdate=document.getElementById("date");
+const months=new Array();
+{    
+    months[0]="January";
+    months[1]="February";
+    months[2]="March";
+    months[3]="April";
+    months[4]="May";
+    months[5]="June";
+    months[6]="July";
+    months[7]="August";
+    months[8]="September";
+    months[9]="October";
+    months[10]="November";
+    months[11]="December";
+
+}
+
+const weekdays=new Array();
+{
+    weekdays[0]="Sunday";
+    weekdays[1]="Monday";
+    weekdays[2]="Tuesday";
+    weekdays[3]="Wednesday";
+    weekdays[4]="Thursday";
+    weekdays[5]="Friday";
+    weekdays[6]="Saturday";
+}
+const time=new Date();
+const getcurrenttime=()=>{
+    var hours=time.getHours();
+    var mins=time.getMinutes();
+    var dur="AM";
+    if(hours>12)
+    {hours=hours-12;
+    dur="PM";}
+    
+     
+    
+    console.log(hours+ ":" +mins +" " +dur);
+    return `${hours}:${mins}  ${dur}`;
+}
+
+
+const day=new Date();
+const getcurrentday=()=>{
+    var currentday= weekdays[day.getDay()];
+    console.log( currentday);
+    return `${currentday}`;
+}
+const exactdate=new Date();
+const getcurrentdate=()=>{
+   var date=exactdate.getDate();
+    var month= months[exactdate.getMonth()];
+    var year=exactdate.getFullYear();
+    console.log(date+ " " +month+ " " +year);
+    return `${date}   ${month}  ${year}`;
+     
+}
+currenttime.innerHTML=getcurrenttime();
+currentday.innerHTML= getcurrentday();
+ currentdate.innerHTML= getcurrentdate();
+
+</script>
+</body>
+</html>
